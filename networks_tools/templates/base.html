@@ -1,0 +1,59 @@
+{% load staticfiles %}
+{% load render_bundle from webpack_loader %}
+{% spaceless %}
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>{% block pagetitle-override %} Blabla.com -
+            {% block pagetitle %}{% endblock %}{% endblock %}</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="keywords"
+              content="{% block meta_keywords %}{% endblock %}">
+        <meta name="description"
+              content="{% block meta_description %}{% endblock %}">
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700italic,700,600,600italic,400italic'
+              rel='stylesheet' type='text/css'>
+
+        {% block bundle_css %}
+            {% render_bundle 'main' 'css' %}
+        {% endblock %}
+
+        {% block htmlhead %}{% endblock %}
+    </head>
+    <body class="{% block body_class %}{% endblock %}">
+
+
+    {% block header %}{% include "header.html" with active_tab='home' %}{% endblock %}
+    <section class=" {% block section_class %}container{% endblock %} o-main">
+        {% block content %}{% endblock %}
+    </section>
+    {% block footer %}{% include 'footer.html' %}{% endblock %}
+
+
+    {% block body_js %}{% endblock %}
+    {% block extra_body_base %}
+        {% block extra_body %}{% endblock %}
+    {% endblock %}
+    {% block bundle_js %}{% render_bundle 'main' 'js' %}{% endblock %}
+
+
+    {#    <script>#}
+    {#        (function (i, s, o, g, r, a, m) {#}
+    {#            i['GoogleAnalyticsObject'] = r;#}
+    {#            i[r] = i[r] || function () {#}
+    {#                        (i[r].q = i[r].q || []).push(arguments)#}
+    {#                    }, i[r].l = 1 * new Date();#}
+    {#            a = s.createElement(o),#}
+    {#                    m = s.getElementsByTagName(o)[0];#}
+    {#            a.async = 1;#}
+    {#            a.src = g;#}
+    {#            m.parentNode.insertBefore(a, m)#}
+    {#        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');#}
+    {#        ga('create', 'UA-71828067-1', 'auto');#}
+    {#        ga('send', 'pageview');#}
+    {#    </script>#}
+    </body>
+    </html>
+{% endspaceless %}

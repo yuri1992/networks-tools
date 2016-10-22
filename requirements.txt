@@ -10,3 +10,13 @@ gunicorn==19.6.0
 ipaddress==1.0.17
 psycopg2==2.6.2
 whitenoise==3.2
+django-webpack-loader==0.3.3
+dj-database-url==0.4.1
+Django==1.9.8
+django-crispy-forms==1.6.1
+django-ipware==1.1.6
+django-webpack-loader==0.3.3
+gunicorn==19.6.0
+ipaddress==1.0.17
+psycopg2==2.6.2
+whitenoise==3.2

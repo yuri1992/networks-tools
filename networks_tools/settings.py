@@ -34,12 +34,17 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'reverse_dns',
     # Disable Django's own staticfiles handling in favour of WhiteNoise, for
     # greater consistency between gunicorn and `./manage.py runserver`. See:
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+
+    'webpack_loader',
+    'crispy_forms',
+
+    'reverse_dns',
+    'whois',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -59,7 +64,7 @@ ROOT_URLCONF = 'urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['networks_tools/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -128,7 +133,7 @@ STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = [
-    os.path.join(PROJECT_ROOT, 'static'),
+    os.path.join(PROJECT_ROOT, '../static'),
 ]
 
 # Simplified static file serving.
@@ -137,6 +142,9 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
 # Daily Limits
 
 REVERSE_DNS_DAILY_LIMIT = 15
+WHOIS_DAILY_LIMIT = 15

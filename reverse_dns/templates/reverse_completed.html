@@ -1,1 +1,9 @@
-the reversed host is : {{ reversed_host }}
+{% extends "base.html" %}
+
+{% block pagetitle %}Reverse Dns lookup{% endblock %}
+{% block content %}
+
+<div class="panel panel-default panel-border-color-primary">
+  the reversed host is : {{ reversed_host }}
+</div>
+{% endblock %}
