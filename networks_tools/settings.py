@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'crispy_forms',
 
     'dns_tools',
+    'network_utils',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -148,3 +149,5 @@ CRISPY_TEMPLATE_PACK = 'bootstrap3'
 REVERSE_DNS_DAILY_LIMIT = 15
 IP_TO_DOMAIN = 15
 WHOIS_DAILY_LIMIT = 15
+TRACEROUTE_DAILY_LIMIT = 15
+PING_DAILY_LIMIT = 15

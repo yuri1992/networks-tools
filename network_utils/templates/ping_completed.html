@@ -1,23 +1,21 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 
-{% block pagetitle %}Traceroute for : {{ url_requested }}{% endblock %}
+{% block pagetitle %}Dns Lookup for : {{ url_requested }}{% endblock %}
 {% block content %}
     <div class="col-xs-12">
         <div class="subpage-header">
-            <h2>Traceroute for : {{ url_requested }}</h2>
+            <h2>Ping Query for : {{ host }}</h2>
         </div>
 
         <div class="panel panel-default panel-border-color-primary panel-border-color">
             <div class="panel-heading panel-header-bottom-line">
-                Traceroute
-                <span class="panel-subtitle">Results for {{ url_requested }} </span>
+                Ping Query
+                <span class="panel-subtitle">Results for {{ host }} </span>
             </div>
             <div class="panel-body">
                 <pre>
-                    <code class="dns">
-                        {{ command_output }}
-                    </code>
+                    <code class="dns">{{ command_output }}</code>
                 </pre>
             </div>
         </div>

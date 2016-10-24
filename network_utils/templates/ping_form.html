@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block pagetitle %}Ping{% endblock %}
+{% block content %}
+    <div class="col-xs-12">
+        <div class="subpage-header">
+            <h2>Ping</h2>
+        </div>
+
+        <div class="panel panel-default panel-border-color-primary panel-border-color">
+            <div class="panel-heading panel-header-bottom-line">
+                Ping
+                <span class="panel-subtitle">Enter Domain Or IP you wish to ping to</span>
+            </div>
+            <div class="panel-body">
+                <form action="" method="post" class="input-group-lg">{% csrf_token %}
+                    {{ form| crispy }}
+                    <button type="submit" class="btn btn-lg btn-default">PING QUERY</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6">
+        <div class="panel panel-default panel-border-color-primary panel-border-color">
+            <div class="panel-heading panel-header-bottom-line">
+                Bla Bla Bla
+            </div>
+            <div class="panel-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu lacus tellus. Integer imperdiet elit eget lobortis hendrerit. Phasellus diam velit, venenatis in pretium sed, viverra quis felis. Proin at hendrerit augue, eget tincidunt est. Pellentesque feugiat imperdiet purus ac vestibulum. Phasellus nec neque quis ex eleifend porta. Integer sed suscipit quam. Nam consequat lobortis mi.
+                In eu ultrices odio. Nam rutrum erat non tristique egestas. Curabitur cursus elit augue, at facilisis nulla maximus a. Nam tempor sit amet quam et hendrerit. In arcu mauris, vulputate eget arcu a, tincidunt aliquet orci. Nullam placerat tempor vulputate. Morbi vel nisl orci. In hac habitasse platea dictumst. Cras velit lacus, laoreet et ante in, porta sollicitudin purus. Sed eu gravida est. Vivamus eget volutpat nibh, auctor sagittis tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis tempor urna a diam dictum, ut facilisis ipsum scelerisque.
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+        <div class="panel panel-default panel-border-color-primary panel-border-color">
+            <div class="panel-heading panel-header-bottom-line">
+                Bla Bla Bla
+            </div>
+            <div class="panel-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu lacus tellus. Integer imperdiet elit eget lobortis hendrerit. Phasellus diam velit, venenatis in pretium sed, viverra quis felis. Proin at hendrerit augue, eget tincidunt est. Pellentesque feugiat imperdiet purus ac vestibulum. Phasellus nec neque quis ex eleifend porta. Integer sed suscipit quam. Nam consequat lobortis mi.
+                In eu ultrices odio. Nam rutrum erat non tristique egestas. Curabitur cursus elit augue, at facilisis nulla maximus a. Nam tempor sit amet quam et hendrerit. In arcu mauris, vulputate eget arcu a, tincidunt aliquet orci. Nullam placerat tempor vulputate. Morbi vel nisl orci. In hac habitasse platea dictumst. Cras velit lacus, laoreet et ante in, porta sollicitudin purus. Sed eu gravida est. Vivamus eget volutpat nibh, auctor sagittis tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis tempor urna a diam dictum, ut facilisis ipsum scelerisque.
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12">
+        <div class="panel panel-default panel-border-color-primary panel-border-color">
+            <div class="panel-heading panel-header-bottom-line">
+                Bla Bla Bla
+            </div>
+            <div class="panel-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu lacus tellus. Integer imperdiet elit eget lobortis hendrerit. Phasellus diam velit, venenatis in pretium sed, viverra quis felis. Proin at hendrerit augue, eget tincidunt est. Pellentesque feugiat imperdiet purus ac vestibulum. Phasellus nec neque quis ex eleifend porta. Integer sed suscipit quam. Nam consequat lobortis mi.
+                In eu ultrices odio. Nam rutrum erat non tristique egestas. Curabitur cursus elit augue, at facilisis nulla maximus a. Nam tempor sit amet quam et hendrerit. In arcu mauris, vulputate eget arcu a, tincidunt aliquet orci. Nullam placerat tempor vulputate. Morbi vel nisl orci. In hac habitasse platea dictumst. Cras velit lacus, laoreet et ante in, porta sollicitudin purus. Sed eu gravida est. Vivamus eget volutpat nibh, auctor sagittis tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis tempor urna a diam dictum, ut facilisis ipsum scelerisque.
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
