@@ -43,8 +43,7 @@ INSTALLED_APPS = [
     'webpack_loader',
     'crispy_forms',
 
-    'reverse_dns',
-    'whois',
+    'dns_tools',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -147,4 +146,5 @@ CRISPY_TEMPLATE_PACK = 'bootstrap3'
 # Daily Limits
 
 REVERSE_DNS_DAILY_LIMIT = 15
+IP_TO_DOMAIN = 15
 WHOIS_DAILY_LIMIT = 15

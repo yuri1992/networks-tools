@@ -36,7 +36,9 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "jquery": "~1.11.0"
+    "highlight.js": "^9.7.0",
+    "jquery": "~1.11.0",
+    "jquery.terminal": "^0.11.11"
   },
   "author": "Yuri Ritvin"
 }

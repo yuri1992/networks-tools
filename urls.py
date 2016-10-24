@@ -18,6 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^reverse_dns_lookup/', include('reverse_dns.urls')),
-    url(r'^whois/', include('whois.urls')),
+    url(r'^dns-tools/', include('dns_tools.urls')),
 ]

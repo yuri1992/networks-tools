@@ -25,10 +25,20 @@
     <body class="{% block body_class %}{% endblock %}">
 
 
-    {% block header %}{% include "header.html" with active_tab='home' %}{% endblock %}
-    <section class=" {% block section_class %}container{% endblock %} o-main">
-        {% block content %}{% endblock %}
+    {% block header %}{% include "header.html" %}{% endblock %}
+
+
+    {% block aside %}{% include "aside.html" with active_tab='home' %}{% endblock %}
+
+    <section class="container o-main">
+        <div class="row">
+
+                {% block content %}{% endblock %}
+
+        </div>
     </section>
+
+
     {% block footer %}{% include 'footer.html' %}{% endblock %}
 
 

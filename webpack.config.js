@@ -7,14 +7,14 @@ module.exports = {
     context: __dirname,
     entry: {
         main: [
-            'webpack-dev-server/client?http://localhost:3007',
+            'webpack-dev-server/client?http://localhost:4000',
             'webpack/hot/only-dev-server',
             "./static/js/index.js"
         ]
     },
     output: {
         path: path.resolve('./static/bundles/'),
-        publicPath: 'http://localhost:3007/static/bundles/',
+        publicPath: 'http://localhost:4000/static/bundles/',
         filename: "[name]-[hash].js"
     },
     plugins: [
